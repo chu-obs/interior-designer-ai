@@ -62,6 +62,8 @@ export default function HomePage() {
       }
 
       if (data.output && data.output.length > 0) {
+        // The Replicate API for this model returns two images: the control map and the final generated image.
+        // We want the final image, which is the second one in the array.
         setOutputImage(data.output[1] || data.output[0]);
         toast.success("Design generated successfully!");
       }
