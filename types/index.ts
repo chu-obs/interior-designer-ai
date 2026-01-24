@@ -1,20 +1,25 @@
-export type NavItem = {
-  name: string;
-  href: string;
-  icon: React.ForwardRefExoticComponent<
-    Omit<React.SVGProps<SVGSVGElement>, 'ref'> & {
-      title?: string | undefined;
-      titleId?: string | undefined;
-    } & React.RefAttributes<SVGSVGElement>
-  >;
-};
+export type RoomType =
+  | "Living Room"
+  | "Bedroom"
+  | "Bathroom"
+  | "Kitchen"
+  | "Dining Room"
+  | "Home Office"
+  | "Kids Room";
 
-export type ImageAreaProps = {
+export type DesignTheme =
+  | "Modern"
+  | "Minimalist"
+  | "Scandinavian"
+  | "Industrial"
+  | "Bohemian"
+  | "Traditional"
+  | "Coastal"
+  | "Mid-Century Modern";
+
+export interface NavItem {
   title: string;
-  icon: React.ForwardRefExoticComponent<
-    Omit<React.SVGProps<SVGSVGElement>, 'ref'> & {
-      title?: string | undefined;
-      titleId?: string | undefined;
-    } & React.RefAttributes<SVGSVGElement>
-  >;
-};
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+  disabled?: boolean;
+}
