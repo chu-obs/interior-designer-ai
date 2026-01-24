@@ -51,7 +51,7 @@ components/
 ├── design-controls.tsx       # Theme/room selection with Combobox
 ├── image-dropzone.tsx        # Image upload dropzone
 ├── output-image.tsx          # Generated image display
-├── site-header.jsx           # Header with sidebar trigger
+├── site-header.tsx           # Header with sidebar trigger
 ├── theme-toggle.tsx          # Dark/light mode toggle
 ├── uploaded-image.tsx        # Uploaded image preview
 └── ui/                       # shadcn/ui component primitives
